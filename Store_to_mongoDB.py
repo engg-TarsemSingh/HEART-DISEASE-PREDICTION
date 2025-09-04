@@ -1,8 +1,8 @@
 from pymongo import MongoClient
 import pandas as pd
 
-training_set = pd.read_csv(r"C:/Users/TARANJEET SINGH/OneDrive/Desktop/CODING/VS Code (programms)/py/PROJECTS/Heart disease prediction/training_dataSet.csv")
-weightbias = pd.read_csv(r"C:/Users/TARANJEET SINGH/OneDrive/Desktop/CODING/VS Code (programms)/py/PROJECTS/Heart disease prediction/weight_bias.csv")
+training_set = pd.read_csv(r"model_training/training_dataSet.csv")
+weightbias = pd.read_csv(r"model_training/weight_bias.csv")
 weight = weightbias["weight"].astype(float).tolist()
 bias = weightbias["bias"].iloc[0]
 URL="MongoDB_URL"
@@ -24,4 +24,5 @@ max_values = []
 col = training_set.columns
 for i in range(len(col)):
     max_values.append(int(training_set[col[i]].max()))
+
 db["max_values"].insert_one({"max":max_values})    
