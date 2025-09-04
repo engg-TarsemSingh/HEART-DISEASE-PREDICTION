@@ -1,4 +1,4 @@
-# Heart Disease Prediction 🫀  
+# Heart Disease Prediction 
 
 This project implements a **binary classification model** to predict the presence of heart disease using medical data.  
 
