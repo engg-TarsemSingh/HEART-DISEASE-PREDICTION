@@ -1,1 +1,6 @@
-flask\nflask-cors\npandas\nnumpy\nscikit-learn\npymongo
+flask
+flask-cors
+pandas
+numpy
+scikit-learn
+pymongo
